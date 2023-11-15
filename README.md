@@ -1,2 +1,2 @@
-# TypeScript Assignment 1
-Bank Account Management
+# TypeScript Assignment 3
+Book Management
