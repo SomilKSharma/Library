@@ -1,8 +1,4 @@
-export interface IBook {
-  title: string;
-  author: string;
-  isAvailable: boolean;
-}
+import { IBook } from "./IBook";
 
 export interface IUser {
   checkedOutBooks: IBook[];

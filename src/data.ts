@@ -1,5 +1,6 @@
 
-import { IBook, Book } from './account';
+import { Book } from './account';
+import { IBook } from './IBook';
 
 const bookData: IBook[] = [
     new Book("The Catcher in the Rye", "J.D. Salinger"),

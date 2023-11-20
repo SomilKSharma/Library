@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var account_1 = require("./account");
-var bookData = [
+const account_1 = require("./account");
+const bookData = [
     new account_1.Book("The Catcher in the Rye", "J.D. Salinger"),
     new account_1.Book("To Kill a Mockingbird", "Harper Lee"),
     new account_1.Book("1984", "George Orwell"),
