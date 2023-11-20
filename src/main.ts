@@ -4,7 +4,7 @@ import { IBook } from './IBook';
 import bookData from './data';
 
 class Library {
-  books: IBook[] = bookData;
+  public books: IBook[] = bookData;
 
   addBook(book: IBook): void {
     this.books.push(book);
