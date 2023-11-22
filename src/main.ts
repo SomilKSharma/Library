@@ -1,27 +1,27 @@
 import * as readlineSync from 'readline-sync';
-import { Book, User } from './account';
+import { BookBase, User } from './account';
 import { IBook } from './IBook';
 import bookData from './data';
 
 class Library {
   public books: IBook[] = bookData;
 
-  addBook(book: IBook): void {
+  public addBook(book: IBook): void {
     this.books.push(book);
   }
 
-  removeBook(book: IBook): void {
+  public removeBook(book: IBook): void {
     const index = this.books.findIndex((b) => b === book);
     if (index !== -1) {
       this.books.splice(index, 1);
     }
   }
 
-  listAvailableBooks(): IBook[] {
+  public listAvailableBooks(): IBook[] {
     return this.books.filter((book) => book.isAvailable);
   }
 
-  searchBooks(query: string): IBook[] {
+  public searchBooks(query: string): IBook[] {
     query = query.toLowerCase();
     return this.books.filter(
       (book) =>
@@ -91,7 +91,7 @@ function addBook(library: Library): void {
   const newBookTitle = readlineSync.question('Enter the title of the new book: ');
   const newBookAuthor = readlineSync.question('Enter the author of the new book: ');
 
-  const newBook = new Book(newBookTitle, newBookAuthor);
+  const newBook = new BookBase(newBookTitle, newBookAuthor);
   library.addBook(newBook);
 
   console.log(`Book "${newBook.title}" by ${newBook.author} added successfully.`);

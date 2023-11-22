@@ -1,17 +1,10 @@
 import { IBook } from "./IBook";
+import { IUser } from "./IUser";
 
-export interface IUser {
-  checkedOutBooks: IBook[];
-  canCheckOutMoreBooks(): boolean;
-  checkOutBook(book: IBook): string;
-  returnBook(book: IBook): string;
-}
-
-export abstract class BookBase implements IBook {
+export class BookBase implements IBook {
   constructor(public title: string, public author: string, public isAvailable: boolean = true) {}
 }
 
-export class Book extends BookBase {}
 
 export abstract class UserBase implements IUser {
   checkedOutBooks: IBook[] = [];
