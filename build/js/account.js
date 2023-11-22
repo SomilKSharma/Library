@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.User = exports.UserBase = exports.Book = exports.BookBase = void 0;
+exports.User = exports.UserBase = exports.BookBase = void 0;
 class BookBase {
     constructor(title, author, isAvailable = true) {
         this.title = title;
@@ -9,9 +9,6 @@ class BookBase {
     }
 }
 exports.BookBase = BookBase;
-class Book extends BookBase {
-}
-exports.Book = Book;
 class UserBase {
     constructor() {
         this.checkedOutBooks = [];

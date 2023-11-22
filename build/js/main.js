@@ -102,7 +102,7 @@ function returnBook(user) {
 function addBook(library) {
     const newBookTitle = readlineSync.question('Enter the title of the new book: ');
     const newBookAuthor = readlineSync.question('Enter the author of the new book: ');
-    const newBook = new account_1.Book(newBookTitle, newBookAuthor);
+    const newBook = new account_1.BookBase(newBookTitle, newBookAuthor);
     library.addBook(newBook);
     console.log(`Book "${newBook.title}" by ${newBook.author} added successfully.`);
 }
